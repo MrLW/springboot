@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+application.hello: Hello WenLi
+
+com.lw.name : "文哥"
+com.lw.want : "还有谁?"
