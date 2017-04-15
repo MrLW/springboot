@@ -1,9 +1,28 @@
+# config下的配置文件会覆盖掉resources下的目录
+
 spring:
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  profiles:
+    active: testdb # 通过配置文件指定使用哪个具体的实现类
+  thymeleaf:
+    cache: false
+
 application.hello: Hello WenLi
 
 com.lw.name : "文哥"
 com.lw.want : "还有谁?"
+
+# 测试随机数
+com:
+  lw:
+    pojo:
+        random:
+               value : ${random.value}
+               number : ${random.int}
+               bignumber : ${random.long}
+               uuid : ${random.uuid}
+server:
+  port: 8081
